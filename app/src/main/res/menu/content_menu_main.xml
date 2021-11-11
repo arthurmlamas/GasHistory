@@ -2,11 +2,11 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/editarLivroMi"
+        android:id="@+id/editGasRecordMi"
         android:title="Editar" />
 
     <item
-        android:id="@+id/removerLivroMi"
+        android:id="@+id/removeGasRecordMi"
         android:title="Remover" />
 
 </menu>

@@ -5,7 +5,9 @@ import br.edu.ifsp.scl.ads.pdm.gashistory.model.GasRecordDAO
 import com.google.firebase.database.ChildEventListener
 import com.google.firebase.database.DataSnapshot
 import com.google.firebase.database.DatabaseError
+import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.ktx.database
+import com.google.firebase.database.ktx.getValue
 import com.google.firebase.ktx.Firebase
 import java.util.*
 
@@ -46,6 +48,19 @@ class FirebaseGasRecordDAO: GasRecordDAO {
 
             override fun onChildMoved(snapshot: DataSnapshot, previousChildName: String?) {
                 // Não se aplica
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                // Não se aplica
+            }
+        })
+        gasHistoryRtDb.addListenerForSingleValueEvent(object: ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                gasRecordsList.clear()
+                snapshot.children.forEach {
+                    val gasRecord: GasRecord = it.getValue<GasRecord>()?: GasRecord()
+                    gasRecordsList.add(gasRecord)
+                }
             }
 
             override fun onCancelled(error: DatabaseError) {

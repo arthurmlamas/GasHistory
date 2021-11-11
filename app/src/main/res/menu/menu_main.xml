@@ -5,6 +5,6 @@
     <item
         android:id="@+id/refreshMi"
         android:title="Atualizar"
-        android:icon="@drawable/ic_refresh_gasRecord"
+        android:icon="@drawable/ic_refresh_gas_record"
         app:showAsAction="always" />
 </menu>

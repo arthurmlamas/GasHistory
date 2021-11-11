@@ -24,7 +24,7 @@ class ManageGasRecordActivity : AppCompatActivity() {
             with(manageGasRecordBinding) {
 
                 gasRecord = GasRecord(
-                    getDateFromDatepicker(),
+                    getDateFromDatePicker(),
                     this.gasRecordPriceEt.text.toString().toDouble()
                 )
             }
@@ -41,8 +41,8 @@ class ManageGasRecordActivity : AppCompatActivity() {
         gasRecordPosition = intent.getIntExtra(MainActivity.EXTRA_GAS_RECORD_POSITION, -1)
 
         if (gasRecord != null) {
-            var date = gasRecord?.date
-            var calendar = Calendar.getInstance()
+            val date = gasRecord.date!!
+            val calendar = Calendar.getInstance()
             calendar.time = date
 
             manageGasRecordBinding.gasRecordDateDp.updateDate(calendar.get(Calendar.YEAR), calendar.get(Calendar.MONTH), calendar.get(Calendar.DAY_OF_MONTH))
@@ -50,17 +50,16 @@ class ManageGasRecordActivity : AppCompatActivity() {
         }
     }
 
-    private fun getDateFromDatepicker(): Date {
-        var day = manageGasRecordBinding.gasRecordDateDp.dayOfMonth
-        var month = manageGasRecordBinding.gasRecordDateDp.month
-        var year = manageGasRecordBinding.gasRecordDateDp.year
+    private fun getDateFromDatePicker(): Date? {
+        val day = manageGasRecordBinding.gasRecordDateDp.dayOfMonth
+        val month = manageGasRecordBinding.gasRecordDateDp.month
+        val year = manageGasRecordBinding.gasRecordDateDp.year
         val calendar: Calendar = Calendar.getInstance()
         calendar.set(year, month, day)
 
         val sdf = SimpleDateFormat("dd-MM-yyyy")
-        val formatedDate = sdf.format(calendar.time)
-        val date = sdf.parse(formatedDate)
-        return date
+        val formattedDate = sdf.format(calendar.time)
+        return sdf.parse(formattedDate)
     }
 
 }
