@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "147756362479",
+    "firebase_url": "https://gashistoryfirebase-5b04c-default-rtdb.firebaseio.com",
+    "project_id": "gashistoryfirebase-5b04c",
+    "storage_bucket": "gashistoryfirebase-5b04c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:147756362479:android:8fd3ccebe080d6641ac91a",
+        "android_client_info": {
+          "package_name": "br.edu.ifsp.scl.ads.pdm.gashistory"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "147756362479-63q2bltfn1kr5pqmfooeeksg0lhokbqp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "br.edu.ifsp.scl.ads.pdm.gashistory",
+            "certificate_hash": "d2dc1851db014f9c39945607e13f3a9d4df3e1b3"
+          }
+        },
+        {
+          "client_id": "147756362479-poegdvi0n045tkkum8h43el88jsv8hhr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCD1mWv7I2s3Yl-EfrvOUcz7ERNjqNPAGY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "147756362479-poegdvi0n045tkkum8h43el88jsv8hhr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
